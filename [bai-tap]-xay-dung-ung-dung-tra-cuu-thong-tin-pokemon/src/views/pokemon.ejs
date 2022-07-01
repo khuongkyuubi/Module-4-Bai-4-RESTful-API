@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Danh sach pokemon</title>
+</head>
+
+<body>
+<h2>List pokermon</h2>
+<% pokemonList.forEach((pokemon, index) => { %>
+    <ul>
+        <li># <%= index%></li>
+        <li>Name: <%= pokemon.name %></li>
+        <li>Detail:<a href="<%= pokemon.url %>"><%= pokemon.url %></a></li>
+    </ul>
+<% }) %>
+
+<span><a href="?page=<%= page - 1%>">Prev</a></span>
+<span><%= page + 1%></span>
+<span><a href="?page=<%= page + 1%>">Next</a></span>
+
+
+
+
+</body>
+</html>
